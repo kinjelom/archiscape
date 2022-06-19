@@ -1,0 +1,37 @@
+{
+  "applications": "*",
+  "changelogDate": "20220619121204",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "project_element",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "ElementType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "C4_PERSON,C4_SYSTEM,C4_CONTAINER,C4_VIEW"
+    },
+    {
+      "fieldName": "documentation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "landscapeElementId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "30"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ProjectElement",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

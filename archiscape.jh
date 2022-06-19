@@ -1,0 +1,54 @@
+entity Landscape {
+	@Id id String required maxlength(10)
+    description String
+    configuration String maxlength(4096)
+}
+
+enum ElementType {
+	C4_PERSON, C4_SYSTEM, C4_CONTAINER, C4_VIEW
+}
+
+entity LandscapeElement {
+	@Id id String required maxlength(30) // landscapeId:elementId
+    type ElementType required
+	documentation String
+}
+
+relationship ManyToOne {
+	LandscapeElement{landscape required} to Landscape
+}
+
+entity Project {
+	name String required maxlength(50)
+    description String
+    configuration String maxlength(4096)
+    active Boolean required
+}
+
+
+relationship ManyToOne {
+	Project{landscape required} to Landscape
+}
+
+entity ProjectContent {
+    version Integer required
+    importDate LocalDate required
+    fileName String
+    content TextBlob required
+}
+relationship ManyToOne {
+	ProjectContent{project required} to Project
+}
+
+
+entity ProjectElement {
+	name String required
+    type ElementType required
+	documentation String
+	landscapeElementId String maxlength(30)
+}
+
+
+// Set pagination options
+paginate all with pagination
+
