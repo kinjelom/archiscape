@@ -1,0 +1,28 @@
+{
+  "archiscapeApp": {
+    "projectContent": {
+      "home": {
+        "title": "Project Contents",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Project Content",
+        "createOrEditLabel": "Create or edit a Project Content",
+        "notFound": "No Project Contents found"
+      },
+      "created": "A new Project Content is created with identifier {{ param }}",
+      "updated": "A Project Content is updated with identifier {{ param }}",
+      "deleted": "A Project Content is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Project Content {{ id }}?"
+      },
+      "detail": {
+        "title": "Project Content"
+      },
+      "id": "ID",
+      "version": "Version",
+      "importDate": "Import Date",
+      "fileName": "File Name",
+      "content": "Content",
+      "project": "Project"
+    }
+  }
+}
